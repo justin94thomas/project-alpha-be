@@ -1,7 +1,8 @@
+const { mongoDB } = require('../config/common');
 const { MongoClient, ObjectId } = require('mongodb');
-const mongoURL = "mongodb+srv://justin1994thomas:wBmev7gywx2LkM9U@project-alpha.0exlttv.mongodb.net/";
+const mongoURL = mongoDB.connectionURL;
 const client = new MongoClient(mongoURL);
-const DATABASE = 'ProjectAlpha';
+const DATABASE = mongoDB.DATABASE;
 const COLLECTIONNAME = 'dashboard';
 let db = null;
 

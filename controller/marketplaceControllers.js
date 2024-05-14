@@ -1,7 +1,8 @@
+const { mongoDB } = require('../config/common');
 const { MongoClient, ObjectId } = require('mongodb');
-const mongoURL = "mongodb://localhost:27017";
+const mongoURL = mongoDB.connectionURL;
 const client = new MongoClient(mongoURL);
-const DATABASE = 'ProjectAlpha';
+const DATABASE = mongoDB.DATABASE;
 const COLLECTIONNAME = 'marketplace';
 let db = null;
 
