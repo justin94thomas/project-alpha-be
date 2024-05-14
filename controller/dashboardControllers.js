@@ -1,5 +1,5 @@
 const { MongoClient, ObjectId } = require('mongodb');
-const mongoURL = "mongodb://localhost:27017";
+const mongoURL = "mongodb+srv://justin1994thomas:wBmev7gywx2LkM9U@project-alpha.0exlttv.mongodb.net/";
 const client = new MongoClient(mongoURL);
 const DATABASE = 'ProjectAlpha';
 const COLLECTIONNAME = 'dashboard';
