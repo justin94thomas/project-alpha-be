@@ -18,4 +18,20 @@ let db = null;
 })()
 
 
-module.exports = {}
+const getBlockbusterMovies = async (req, res) => {
+    try {
+        const result = await db.find().toArray();
+        const data = result[0]?.Movies;
+        res.send({
+            success: true,
+            data: data
+        });
+    } catch (error) {
+        res.status(500).send({
+            success: false,
+            message: error,
+        });
+    }
+}
+
+module.exports = { getBlockbusterMovies }

@@ -4,5 +4,7 @@ const mongoDB = {
     connectionURL: `mongodb+srv://justin1994thomas:wBmev7gywx2LkM9U@project-alpha.0exlttv.mongodb.net/`,
     DATABASE: 'ProjectAlpha'
 }
-
-module.exports = { mongoDB };
+const common = {
+    baseURL: 'http://projectalpha.com/'
+}
+module.exports = { mongoDB, common };
