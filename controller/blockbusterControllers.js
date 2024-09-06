@@ -34,4 +34,21 @@ const getBlockbusterMovies = async (req, res) => {
     }
 }
 
-module.exports = { getBlockbusterMovies }
+const getBlockbusterSeats = async (req, res) => {
+    try {
+        const result = await db.find().toArray();
+        const data = result[0]?.Seats;
+        res.send({
+            success: true,
+            data: data
+        });
+    } catch (error) {
+        res.status(500).send({
+            success: false,
+            message: error,
+        });
+    }
+}
+
+
+module.exports = { getBlockbusterMovies, getBlockbusterSeats }
